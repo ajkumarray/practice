@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()        //Codeforces problem 1475A "Odd Divisor".    this solution exceeded time limit...   check cpp solution
+int main()        //Codeforces problem 1475A "Odd Divisor".    this solution exceeded time limit...   refer cpp solution
 {
     int i,n,j,f;
     int long m;
