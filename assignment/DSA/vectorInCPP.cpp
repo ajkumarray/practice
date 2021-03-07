@@ -12,7 +12,7 @@
 using namespace std;
 int main(int argc, const char * argv[]) {
     
-    vector<int> vectoray;
+    vector<int> vectoray;               //assign vector
     /*
     Syntax:
        vector<object_type> identifier;
@@ -64,13 +64,13 @@ int main(int argc, const char * argv[]) {
      shrink_to_fit() -- Reduces the capacity of the container to fit its size and destroy all elements beyond the capacity.
      reverse() -- Requests that the vector capacity be at last enough to contain n elements
      */
-    vectoray.resize(5);
+    vectoray.resize(5);                 //resizes the vector size to 5
     cout << "\nSize after resize: " << vectoray.size();
-    if(vectoray.empty())
+    if(vectoray.empty())                //checks if the vector is empty or not
         cout << "\nVector is empty" << endl;
     else
         cout << "\nvector is not empty" << endl;
-    vectoray.shrink_to_fit();
+    vectoray.shrink_to_fit();           //shrinks the vector
     cout << "Vector elements are: ";
     for(auto it = vectoray.begin(); it != vectoray.end(); it++)
         cout << *it << " ";
@@ -80,7 +80,7 @@ int main(int argc, const char * argv[]) {
     cout << "at: vectoray.at(4) = " << vectoray.at(4) << endl;
     cout << "front(): vectoray.front() = " << vectoray.front() << endl;
     cout << "back(): vectoray.back() = " << vectoray.back() << endl;
-    int* pos = vectoray.data();
+    int* pos = vectoray.data();         //pointer to the first element
     cout << "The first element is: " << *pos << endl;
     /*
      Element access: --
@@ -103,7 +103,7 @@ int main(int argc, const char * argv[]) {
      emplace_back() -- It is used to insert a new element into the vector container, the new element is added to the end of the vector
      */
     
-    vector<int> vectoray2;
+    vector<int> vectoray2;          //assign vector
     vectoray2.assign(5,10);         //fill the array with 10 five times
     cout << "The vector elements are: ";
     for(int i=0; i < vectoray2.size(); i++)
