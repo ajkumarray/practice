@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Making</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Intro</h1>
+        <h2>Contact</h2>
+        <p>Name: * <input type="text" name="name" id="name" required></p>
+        <fieldset>
+            <legend>Gender</legend>
+            <p>
+                Male <input type="radio" name="Gender" id="male">
+                Female <input type="radio" name="Gender" id="female">
+                Transgender <input type="radio" name="Gender" id="transgender">
+            </p>
+        </fieldset>
+        <p>Address: <textarea name="Address" id="address" cols="100" rows="10"></textarea></p>
+        <p>Email: <input type="email" name="email" id="email"></p>
+        <p>Pincode: <input type="number" name="pincode" id="pincode"></p>
+        <p>List: <select name="list" id="list">
+            <option value="">--Select from List--</option>
+            <option value="List1">List1</option>
+            <option value="List2">List2</option>
+        </select></p>
+        <p>DOB: <input type="date" name="DOB" id="dob"></p>
+        <p>Password: <input type="password" name="password" id="password"></p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
