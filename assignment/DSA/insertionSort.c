@@ -1,6 +1,7 @@
 //  insertionSort
 //  Created by Ajit Kumar on March12//2021 AD.
 //  Copyright © 2021 Ajit Kumar. All rights reserved.
+
 /*
  In insertion sort the array is virtually split into a sorted and an unsorted part.
  Values from the unsorted part are picked and placed at the correct position in the sorted part.
@@ -13,6 +14,7 @@
         Move the greater elements one position up to make space for thr swapped elements.
  Time Complexity: O(n^2) {worst and average case}
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -30,12 +32,14 @@ void insertionSort(int ray[],int n)         //function to sort an array using in
         ray[j+1] = temp;
     }
 }
+
 void printArrray(int ray[],int n)           //function to print array
 {
     for(int i=0;i<n;i++)
         printf("%d ",ray[i]);
     printf("\n");
 }
+
 int main(int argc, const char * argv[]) {
     int n;
     printf("Enter number of elements: ");
