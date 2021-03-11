@@ -8,7 +8,7 @@
  
  The basic idea is to calculate the ratio value/weight for each item and sort the item on basis of this ratio.
  Then take the item with the highest ratio and add them until we can't add the next item as a whole and at the end add the next item as much as we can.
- Wich will always be the optimal solution to this problem.
+ Which will always be the optimal solution to this problem.
  */
 
 #include <bits/stdc++.h>
@@ -62,3 +62,7 @@ int main(int argc, const char * argv[]) {
     cout << "Maximum value we can obtain = " << fractionalKnapsack(w, ray, n);      //function call
     return 0;
 }
+
+/*
+ As main time taking step is sorting, the whole problem can be solved in O(n log n) only.
+ */
