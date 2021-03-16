@@ -1,7 +1,11 @@
-//  single linked list
+//  singleLinkedList
+//  Created by Ajit Kumar on March15//2021 AD.
+//  Copyright © 2021 Ajit Kumar. All rights reserved.
 
-//  Created by Ajit Kumar on October12//2020 AD.
-//  Copyright © 2020 Ajit Kumar. All rights reserved.
+/*
+ Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location, the elements are linked using pointers.
+ */
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,7 +54,7 @@ int main()
     }
 }
 
-void create()           //to create a list
+void create()
 {
     struct node *last;
     char c;int val;
@@ -80,7 +84,7 @@ void create()           //to create a list
     while(c=='y');
 }
 
-void insert(struct node *last)              //to insert values in list on a specific position
+void insert(struct node *last)
 {
     int val,pos; //int i;
     struct node *temp;
@@ -110,7 +114,7 @@ void insert(struct node *last)              //to insert values in list on a spec
     }
 }
 
-void display(struct node *last)         //to display existing values in list
+void display(struct node *last)
 {
     if(head==NULL)
         printf("Linked list is empty.");
@@ -125,7 +129,7 @@ void display(struct node *last)         //to display existing values in list
     }
 }
 
-void delet(struct node *last)           //to delete values from list from a specific position
+void delet(struct node *last)
 {
     int pos;
     struct node *temp;
@@ -157,7 +161,7 @@ void delet(struct node *last)           //to delete values from list from a spec
     }
 }
 
-void reverse()                  //to reverse the order of values in list
+void reverse()
 {
     struct node *prev=NULL;
     struct node *next=NULL;
@@ -172,7 +176,7 @@ void reverse()                  //to reverse the order of values in list
     printf("List is reversed.");
 }
 
-void sort(struct node *last)            //to sort the list in ascending order
+void sort(struct node *last)
 {
     struct node *temp=NULL;
     int t;
@@ -194,7 +198,7 @@ void sort(struct node *last)            //to sort the list in ascending order
     printf("List is sorted in ascending order.");
 }
 
-void search(struct node *last)          //to search a specific value in list
+void search(struct node *last)
 {
     int pos=1,val,flag=0;
     printf("Enter value to be searched:");
