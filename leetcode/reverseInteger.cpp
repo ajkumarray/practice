@@ -22,8 +22,6 @@ public:
         {
             int currDigit = num % 10;
             revNum = (revNum * 10) + currDigit;
-            if((revNum - currDigit)/10 != prevRevNum)
-                return 0;
             prevRevNum = revNum;
             num = num / 10;
         }
