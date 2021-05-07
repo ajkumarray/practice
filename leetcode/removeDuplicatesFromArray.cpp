@@ -1,4 +1,4 @@
-//  removeDuplicatesFromSortedArray
+//  removeDuplicatesFromSortedArray leetcode problem
 //  Created by Ajit Kumar on April10//2021 AD.
 //  Copyright © 2021 Ajit Kumar. All rights reserved.
 
