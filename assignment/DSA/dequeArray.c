@@ -1,43 +1,15 @@
 //deque using array
 #include<stdio.h>
 #include<stdlib.h>
-#define max 5
-void insert_front(void);         //function to insert values in queue from front
-void insert_rear(void);        //function to insert values in queue from rear
-void delete_front(void);         //function to delete values from queue from front
-void delete_rear(void);        //function to delete values from queue from rear
-void display(void);             //function to display values in queue
-int ray[max],front=0,rear=-1,count=0;
-int main()
-{
-    int n;
-    printf("1. Insert from Front \t 2. Insert from Rear \t 3. Delete from Front \t 4. Delete from Rear \t 5. Display \t 6. Exit");
-    for(;;)
-    {
-        printf("\nEnter your response:");
-        scanf("%d",&n);
-        switch(n)
-        {
-            case 1:insert_front();
-                break;
-            case 2:insert_rear();
-                break;
-            case 3:delete_front();
-                break;
-            case 4:delete_rear();
-                break;
-            case 5:display();
-                break;
-            case 6:exit(0);
-        }
-    }
-}
 
-void insert_front(void)          //inserting values from front
+#define max 5
+int ray[max],front=0,rear=-1,count=0;
+
+void insert_front(void)          //function to insert values in queue from front
 {
     int i,v;
     if(count==max)
-        printf("\nQueue Overflow");
+        printf("Queue Overflow\n");
     else
     {
         if(rear>=front)
@@ -56,7 +28,7 @@ void insert_front(void)          //inserting values from front
             for(i=max-1;i>front;i--)
                 ray[i]=ray[i-1];
         }
-        printf("\nEnter the value to be inserted from front:");
+        printf("Enter the value to be inserted from front: ");
         scanf("%d",&v);
         ray[front]=v;
         rear++;
@@ -64,14 +36,14 @@ void insert_front(void)          //inserting values from front
     }
 }
 
-void insert_rear(void)             //inserting value from rear
+void insert_rear(void)             //function to insert values in queue from rear
 {
     int v;
     if(count==max)
-        printf("\nQueue is overflow.");
+        printf("Queue overflow\n");
     else
     {
-        printf("\nEnter value to inserted from rear:");
+        printf("Enter value to be inserted from rear: ");
         scanf("%d",&v);
         rear++;
         if(rear==max)
@@ -81,13 +53,13 @@ void insert_rear(void)             //inserting value from rear
     }
 }
 
-void delete_front(void)          //deleting value from front
+void delete_front(void)          //function to delete values from queue from front
 {
     if(count==0)
-        printf("\nQueue Underflow");
+        printf("Queue Underflow\n");
     else
     {
-        printf("The value deleted from front of queue is %d",ray[front]);
+        printf("The value deleted from front of queue is %d\n",ray[front]);
         front++;
         if(front==max)
             front=0;
@@ -95,13 +67,13 @@ void delete_front(void)          //deleting value from front
     }
 }
 
-void delete_rear(void)         //deleting value from rear
+void delete_rear(void)         //function to delete values from queue from rear
 {
     if(count==0)
-        printf("\nQueue Underflow");
+        printf("Queue Underflow\n");
     else
     {
-        printf("\nThe value deleted from rear of Queue is %d",ray[front]);
+        printf("The value deleted from rear of Queue is %d\n",ray[front]);
         front++;
         if(front==max)
             front=0;
@@ -109,22 +81,48 @@ void delete_rear(void)         //deleting value from rear
     }
 }
 
-void display(void)          //displaying values in queue
+void display(void)              //function to display values in queue
 {
     int i;
     if(count==0)
-        printf("\nQueue Empty");
+        printf("Queue Empty\n");
     else
     {
         if(front<=rear)
             for(i=front;i<=rear;i++)
-                printf("\n%d",ray[i]);
+                printf("%d ",ray[i]);
         else
         {
             for(i=front;(i<=max-1);i++)
-                printf("\n%d",ray[i]);
+                printf("%d ",ray[i]);
             for(i=0;i<=rear;i++)
-                printf("\n%d",ray[i]);
+                printf("%d ",ray[i]);
+        }
+    }
+}
+
+
+int main()
+{
+    int n;
+    printf("1. Insert from Front \t 2. Insert from Rear \t 3. Delete from Front \t 4. Delete from Rear \t 5. Display \t 6. Exit");
+    for(;;)
+    {
+        printf("Enter your response: ");
+        scanf("%d",&n);
+        switch(n)
+        {
+            case 1:insert_front();
+                break;
+            case 2:insert_rear();
+                break;
+            case 3:delete_front();
+                break;
+            case 4:delete_rear();
+                break;
+            case 5:display();
+                break;
+            case 6:exit(0);
         }
     }
 }
