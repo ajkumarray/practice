@@ -3,12 +3,12 @@ class Solution
 public:
     string shiftingLetters(string s, vector<int> &shifts)
     {
-        int raySize = shifts.size();
-        for (auto i = shifts.end(); i != shifts.begin(); i--)
+        long long shift = 0;
+        for (int i = s.size() - 1; i >= 0; i--)
         {
-            while (raySize--)
-            {
-            }
+            s[i] = ((s[i] - 'a') + (shift + shifts[i]) % 26) % 26 + 'a';
+            shift += shifts[i];
         }
+        return s;
     }
 };
