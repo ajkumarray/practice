@@ -16,7 +16,7 @@ public:
             vector<int> left = binarySearch(nums, l, mid - 1, target);
             vector<int> right = binarySearch(nums, mid + 1, r, target);
 
-            vector<int> ray { min(mid, left[0]), max(mid, right[1]) }
+            vector<int> ray { min(mid, left[0]), max(mid, right[1]) };
             return ray;
         }
 
