@@ -11,11 +11,11 @@ public:
         string ray = "", word;
         while (ss >> word)
         {
-            //cout << word << endl;
             reverse(word.begin(), word.end());
-            cout << word << endl;
-            ray = ray + word + " ";
+            ray += ray + word + " ";
         }
+        for (int i = 0; i < s.length() - 1; i++)
+            s[i] = s[i];
         return ray;
     }
 };
@@ -24,7 +24,7 @@ int main()
 {
     cout << "Enter a string: ";
     string s;
-    cin >> s;
+    getline(cin, s);
     Solution sol;
     s = sol.reverseWords(s);
     cout << s << endl;
