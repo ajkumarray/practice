@@ -1,6 +1,8 @@
 class Solution
 {
 public:
+    //  counting the number of nodes in list and traversing up to the nth node from last
+
     int getCount(ListNode *head)
     {
         int count = 0;
@@ -36,5 +38,33 @@ public:
             prev->next = temp->next;
             return head;
         }
+    }
+
+    /*
+    2 Pointer Algorithm
+*/
+
+    ListNode *removeNthFromEnd(ListNode *head, int n)
+    {
+        ListNode *temp, *first = head, *second = head;
+        for (int i = 0; i < n; i++)
+        {
+            if (second->next == NULL)
+            {
+                if (i == n - 1)
+                {
+                    head = head->next;
+                }
+                return head;
+            }
+            second = second->next;
+        }
+        while (second->next != NULL)
+        {
+            first = first->next;
+            second = second->next;
+        }
+        first->next = first->next->next;
+        return head;
     }
 };
